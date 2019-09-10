@@ -1,0 +1,183 @@
+:root{
+    --mainColor: #f38826;
+    --font-archivo: 'Archivo Black', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header nav{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding: 12px 12px;
+    box-shadow: 0 0 3px 4px #cccccc49;
+}
+
+ul a{
+    text-decoration: none;
+    color: black
+}
+
+ul a:hover{
+    color: #f38826;
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+
+#logo{
+    width: 60px;
+    height: 60px;
+    background: url(./assests/logo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#logo::before{ 
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    content: "";
+    display: block;
+    animation: loading 0.8s infinite ease-in-out alternate-reverse;
+
+}
+
+header nav ul{
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    margin-top: 20px
+
+}
+
+header nav ul li{
+    list-style-type: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+
+}   
+
+.showcase{
+    text-align: center;
+    padding: 30vh;
+    background: linear-gradient(to top right, var(--mainColor), rgba(255, 166, 0, 0.726)), url("./assests/office.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: var(--font-archivo);
+    color: white;
+    font-size: 1.9em;
+    text-transform: uppercase;
+    padding-top: 39vh
+
+}
+
+.showcase p{
+    font-family: var(--font-poppins);
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.qualities{
+    display: block;
+}
+
+.qualities .qualityBox{
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    padding: 3em 2em; 
+}
+
+.qualityBoxText h1{
+    font-family: var(--font-poppins);
+
+    
+}
+.qualities .qualityBox .qualityBoxText p{
+    width: 70%;
+    font-family: var(--font-poppins);
+    margin:  1em 0;
+    line-height: 1.9em;
+} 
+
+.qualities .qualityBox .qualityBoxText button{
+    background: white;
+    border: 1px solid var(--mainColor);
+    padding: 10px 30px;
+    border-radius: 32px;
+    font-family: var(--font-poppins);
+    transition: 0.5s;
+
+
+}
+
+.qualities .qualityBox .qualityBoxText button:hover{
+    background: var(--mainColor);
+    color: white;
+}
+
+.qualityBoxText p b{
+    color: var(--mainColor);
+    text-transform: uppercase;
+}
+
+.qualityBoxImg{
+    width: 30vw;
+    height: 50vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+.qualityBox:nth-child(1) .qualityBoxImg{
+    background: url(./assests/safeIcon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.qualityBox:nth-child(2) .qualityBoxImg{
+    background: url("./assests/fastIcon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.qualityBox:nth-child(3) .qualityBoxImg{
+    background: url("./assests/customercareAgent.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes loading{ 
+    from{ 
+        height: 100%
+    }
+
+    to{ 
+        height: 5%;
+    }
+}
